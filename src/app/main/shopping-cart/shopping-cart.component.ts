@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
+import { productStore } from '../../store/product.store';
 
 @Component({
   selector: 'app-shopping-cart',
   templateUrl: './shopping-cart.component.html',
-  styleUrls: ['./shopping-cart.component.css']
 })
 export class ShoppingCartComponent {
-
+  store = productStore;
 }

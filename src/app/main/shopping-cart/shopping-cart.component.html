@@ -1,1 +1,6 @@
-<p>shopping-cart works!</p>
+<ul>
+  <li *ngFor="let item of store.cart">
+    {{item.name}} [{{item.count}}] {{item.count * item.price}}$
+  </li>
+</ul>
+
