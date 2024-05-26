@@ -1,9 +1,10 @@
 <h2 style="margin:5px; width: fit-content; margin:auto;">Shopping Cart</h2>
-
-<p-card
-  [style]="{ margin: '5px' }"
-  *ngFor="let item of store.cart"
-  [header]="item.name"
->
-  <p class="m-0">[{{ item.count }}] {{ item.count * item.price }}$</p>
-</p-card>
+<div>
+	<h1>CART</h1>
+	<div
+			[style]="{ margin: '5px' }"
+			*ngFor="let item of store.cart"
+	>
+		<p class="m-0">[{{ item.count }}] {{ item.count * item.price }}$</p>
+	</div>
+</div>

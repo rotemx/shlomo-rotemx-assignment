@@ -1,10 +1,16 @@
-import { Component } from '@angular/core';
-import { productStore } from '../../store/product.store';
+import {ChangeDetectionStrategy, Component} from "@angular/core";
+import {ProductStore}                       from "../../store/product.store";
 
 @Component({
-  selector: 'app-shopping-cart',
-  templateUrl: './shopping-cart.component.html',
+	selector       : "app-shopping-cart",
+	templateUrl    : "./shopping-cart.component.html",
+	changeDetection: ChangeDetectionStrategy.OnPush
+	
 })
 export class ShoppingCartComponent {
-  store = productStore;
+	
+	constructor(public store: ProductStore) {
+	}
+	
+	
 }

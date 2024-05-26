@@ -18,6 +18,8 @@ import { ButtonModule } from 'primeng/button';
 import { OrderListModule } from 'primeng/orderlist';
 import { CardModule } from 'primeng/card';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MobxAngularModule} from "mobx-angular";
+import {ProductStore} from "./store/product.store";
 
 @NgModule({
   declarations: [
@@ -29,6 +31,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ShoppingCartComponent,
   ],
   imports: [
+    MobxAngularModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
@@ -43,7 +46,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     StyleClassModule,
     CardModule,
   ],
-  providers: [],
+  providers: [ProductStore],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

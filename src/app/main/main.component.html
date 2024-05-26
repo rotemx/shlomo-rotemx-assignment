@@ -1,14 +1,14 @@
 <app-header style="margin: auto;"></app-header>
 <p-splitter
-  [panelSizes]="[50, 50]"
-  [style]="{ height: '100%' }"
-  styleClass="mb-5"
+		[panelSizes]="[50, 50]"
+		[style]="{ height: '100%' }"
+		styleClass="mb-5"
 >
-  <ng-template pTemplate>
-    <app-product-list style="height: 100%; width:100%"></app-product-list>
-  </ng-template>
-  <ng-template pTemplate>
-    <app-shopping-cart style="height: 100%; width:100%"></app-shopping-cart>
-  </ng-template>
+	<ng-template pTemplate>
+		<app-product-list style="height: 100%; width:100%"></app-product-list>
+	</ng-template>
+	<ng-template pTemplate>
+		<app-shopping-cart style="height: 100%; width:100%"></app-shopping-cart>
+	</ng-template>
 </p-splitter>
 <app-footer></app-footer>

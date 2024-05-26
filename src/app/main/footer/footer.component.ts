@@ -1,6 +1,6 @@
-import { Component,  } from '@angular/core';
+import { Component  } from '@angular/core';
 import { computed } from 'mobx-angular';
-import { productStore } from 'src/app/store/product.store';
+import {ProductStore}                       from "../../store/product.store";
 
 @Component({
   selector: 'app-footer',
@@ -8,7 +8,8 @@ import { productStore } from 'src/app/store/product.store';
   styleUrls: ['./footer.component.css'],
 })
 export class FooterComponent {
-  store = productStore;
+    constructor(public store: ProductStore) {
+    }
 
   @computed get total() {
    return this.store.cart.reduce(

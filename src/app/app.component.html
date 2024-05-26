@@ -1,1 +1,6 @@
-<main></main><router-outlet></router-outlet>
+<div>App component IN</div>
+<ng-container *mobxAutorun>
+	<router-outlet
+			(activate)="routeActivated()"
+	></router-outlet>
+</ng-container>
