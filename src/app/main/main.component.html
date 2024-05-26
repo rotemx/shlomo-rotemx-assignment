@@ -1,23 +1,14 @@
-<div class="stage1">
-  <app-header></app-header>
-</div>
-
+<app-header style="margin: auto;"></app-header>
 <p-splitter
-  [panelSizes]="[25, 75]"
-  [style]="{ height: '300px' }"
+  [panelSizes]="[50, 50]"
+  [style]="{ height: '100%' }"
   styleClass="mb-5"
 >
   <ng-template pTemplate>
-    <div class="col flex align-items-center justify-content-center">
-      <app-product-list></app-product-list>
-    </div>
+    <app-product-list style="height: 100%; width:100%"></app-product-list>
   </ng-template>
   <ng-template pTemplate>
-    <div class="col flex align-items-center justify-content-center">
-      <app-shopping-cart></app-shopping-cart>
-    </div>
+    <app-shopping-cart style="height: 100%; width:100%"></app-shopping-cart>
   </ng-template>
 </p-splitter>
-<div class="stage2">
-  <app-footer></app-footer>
-</div>
+<app-footer></app-footer>
