@@ -8,5 +8,9 @@ productStore.products:
 </div>
 <div >
 	<div>App component IN</div>
-	<router-outlet></router-outlet>
+	<router-outlet
+			(activate)="routeActivated()"
+	></router-outlet>
+	
+	
 </div>
