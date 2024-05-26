@@ -1,6 +1,6 @@
 <h2 style="margin:5px; width: fit-content; margin:auto;">Shopping Cart</h2>
-<div>
-	<h1>CART</h1>
+<div *mobxAutorun="{}">
+	<h1>CART: {{store.cart.length}} ITEMS</h1>
 	<div
 			[style]="{ margin: '5px' }"
 			*ngFor="let item of store.cart"

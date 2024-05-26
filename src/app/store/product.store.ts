@@ -1,4 +1,6 @@
 import {action, observable} from "mobx-angular";
+import {makeAutoObservable} from "mobx";
+declare let window:any;
 
 export interface item {
 	name: string;
@@ -7,6 +9,12 @@ export interface item {
 }
 
 export class ProductStore {
+	
+	constructor() {
+		window['store'] = this;
+		makeAutoObservable(this);
+		
+	}
 	@observable products = [
 		{
 			name : "Tomato",

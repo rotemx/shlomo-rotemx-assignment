@@ -1,6 +1,8 @@
 import {ChangeDetectionStrategy, Component} from "@angular/core";
 import {ProductStore}                       from "../../store/product.store";
 
+declare let window:any;
+
 @Component({
 	selector       : "app-shopping-cart",
 	templateUrl    : "./shopping-cart.component.html",
@@ -10,6 +12,7 @@ import {ProductStore}                       from "../../store/product.store";
 export class ShoppingCartComponent {
 	
 	constructor(public store: ProductStore) {
+		window['cart_store'] = this.store;
 	}
 	
 	
