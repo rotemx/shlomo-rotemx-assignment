@@ -1,9 +1,12 @@
 <h2 style="margin:5px; width: fit-content; margin:auto;">Shopping Cart</h2>
 
-<p-card
-  [style]="{ margin: '5px' }"
-  *ngFor="let item of store.cart"
-  [header]="item.name"
->
-  <p class="m-0">[{{ item.count }}] {{ item.count * item.price }}$</p>
-</p-card>
+<div *mobxAutorun>
+  <div
+          
+          [style]="{ margin: '5px' }"
+          *ngFor="let item of store.cart"
+  >
+    item.name: {{item.name}}
+    <p class="m-0">[{{ item.count }}] {{ item.count * item.price }}$</p>
+  </div>
+</div>

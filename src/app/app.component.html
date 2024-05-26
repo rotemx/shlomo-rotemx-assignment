@@ -1,1 +1,12 @@
-<main></main><router-outlet></router-outlet>
+<h1>App.Component
+</h1>
+
+productStore.products:
+<div *mobxAutorun="{ name: 'products' }">
+{{store.products}}
+
+</div>
+<div >
+	<div>App component IN</div>
+	<router-outlet></router-outlet>
+</div>
